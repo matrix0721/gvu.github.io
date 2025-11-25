@@ -8,11 +8,11 @@
   <!-- TODO: Replace with your paper title and author names -->
   <meta name="title" content="Learning to Generate via Understanding: Understanding-Driven Intrinsic Rewarding for Unified Multimodal Models - AUTHOR_NAMES">
   <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <meta name="description" content="We introduce GvU, an intrinsic alignment reward enabling UMMs to refine visual generation through self-supervised RL, narrowing their gap with visual understanding.">
   <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
+  <meta name="keywords" content="Unified Multimodal Models, Intrinsic Rewarding, Reinforcement Learning">
   <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="author" content="Jiadong Pan, Liang Li">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
   
@@ -23,7 +23,7 @@
   <!-- TODO: Same as paper title above -->
   <meta property="og:title" content="Learning to Generate via Understanding: Understanding-Driven Intrinsic Rewarding for Unified Multimodal Models">
   <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <meta property="og:description" content="We introduce GvU, an intrinsic alignment reward enabling UMMs to refine visual generation through self-supervised RL, narrowing their gap with visual understanding.">
   <!-- TODO: Replace with your actual website URL -->
   <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
   <!-- TODO: Create a 1200x630px preview image and update path -->
@@ -202,7 +202,7 @@
                 <span class="author-block">
                   <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Liang Li</a><sup>*</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Yuxin Peng</a>
                   </span>
                   </div>
 
@@ -255,25 +255,6 @@
   </div>
 </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -283,8 +264,7 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+Recently, unified multimodal models (UMMs) have made remarkable progress in integrating visual understanding and generation, demonstrating strong potential for complex text-to-image (T2I) tasks. Despite their theoretical promise, a persistent capability gap exists: UMMs typically exhibit superior visual understanding but comparatively weaker generative capabilities. This discrepancy arises largely from the intrinsic decoupling between the understanding and generation processes. While a UMM can accurately interpret fine-grained visual details, it often struggles to produce semantically coherent images from complex textual prompts. To address this challenge, we explore UMMs' internal understanding capability to enhance generation quality. We propose a token-level intrinsic text-image alignment reward mechanism,GvU, enabling the UMM to act simultaneously as teacher and student: it evaluates its own outputs using the understanding branch to guide the generations accordingly. Building upon this, we design a self-supervised reinforcement learning framework, allowing UMMs to iteratively improve their generation quality through understanding-based intrinsic reward signals—without reliance on external supervision. Experimental results show that our method substantially boosts UMMs' generation, which in turn strengthens their fine-grained visual understanding, narrowing the capability gap between UMMs' visual understanding and generation.          </p>
         </div>
       </div>
     </div>
@@ -355,61 +335,6 @@
   </div>
 </section>
 <!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
 
 
 <!--BibTex citation -->
