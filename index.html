@@ -295,12 +295,11 @@ Recently, unified multimodal models (UMMs) have made remarkable progress in inte
         <div class="content">
           <h2 class="title is-3">Motivation</h2>
           <center>
-          <img src="static/images/carousel1.jpg" alt="Inference Overview" class="center-image"/>
+          <img src="static/images/motivation.png" alt="Motivation" class="center-image"/>
           </center>
           <div class="level-set has-text-justified">
             <p>
-               Our method supports multiple applications by application dependent pre-processing (left), converting the input content into a uniform video format. For image-to-video, the input image is duplicated and transformed using perspective transformations, synthesizing a coarse video with some camera motion. For subject driven video generation, the input is omitted -  finetuning alone take care of the fidelity.
-               This coarse video is then edited using our general ``Dreamix Video Editor`` (right): we first corrupt the video by downsampling followed by adding noise. We then apply the finetuned text-guided video diffusion model, which upscales the video to the final spatio-temporal resolution
+            (Left) UMMs exhibit an understanding–generation gap: they recognize visual details but fail to reflect them in generated images. (Right) Bottom: our self-teaching mechanism uses intrinsic rewards from the understanding branch to guide generation,improving text–image alignment without external supervision.
             </p>
           </div>
         </div>
@@ -316,12 +315,11 @@ Recently, unified multimodal models (UMMs) have made remarkable progress in inte
         <div class="content">
           <h2 class="title is-3">Method</h2>
           <center>
-          <img src="static/images/carousel1.jpg" alt="Inference Overview" class="center-image"/>
+          <img src="static/images/method.jpg" alt="Method" class="center-image"/>
           </center>
           <div class="level-set has-text-justified">
             <p>
-               Our method supports multiple applications by application dependent pre-processing (left), converting the input content into a uniform video format. For image-to-video, the input image is duplicated and transformed using perspective transformations, synthesizing a coarse video with some camera motion. For subject driven video generation, the input is omitted -  finetuning alone take care of the fidelity.
-               This coarse video is then edited using our general ``Dreamix Video Editor`` (right): we first corrupt the video by downsampling followed by adding noise. We then apply the finetuned text-guided video diffusion model, which upscales the video to the final spatio-temporal resolution
+            Overview of the GvU implementation. It comprises two key components: the token-level model-intrinsic reward that provides fine-grained text–image alignment signals, and the self-supervised reinforcement learning process that uses these signals to enhance UMMs' generative ability progressively, enabling continuous self-improvement without external supervision.
             </p>
           </div>
         </div>
@@ -337,12 +335,11 @@ Recently, unified multimodal models (UMMs) have made remarkable progress in inte
         <div class="content">
           <h2 class="title is-3">Qualitative Results</h2>
           <center>
-          <img src="static/images/carousel1.jpg" alt="Inference Overview" class="center-image"/>
+          <img src="static/images/qualitative_results.jpg" alt="Qualitative Results" class="center-image"/>
           </center>
           <div class="level-set has-text-justified">
             <p>
-               Our method supports multiple applications by application dependent pre-processing (left), converting the input content into a uniform video format. For image-to-video, the input image is duplicated and transformed using perspective transformations, synthesizing a coarse video with some camera motion. For subject driven video generation, the input is omitted -  finetuning alone take care of the fidelity.
-               This coarse video is then edited using our general ``Dreamix Video Editor`` (right): we first corrupt the video by downsampling followed by adding noise. We then apply the finetuned text-guided video diffusion model, which upscales the video to the final spatio-temporal resolution
+            Qualitative comparisons between our GvU and other methods. Compared to other approaches, GvU generates images with better text-image alignment and more coherent spatial layout.
             </p>
           </div>
         </div>
@@ -351,48 +348,45 @@ Recently, unified multimodal models (UMMs) have made remarkable progress in inte
   </div>
 </section>
 
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+<section class="section is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3">Cumulative Effects of GvU Performance</h2>
+          <center>
+          <img src="static/images/qualitative_results.jpg" alt="Cumulative Effects" class="center-image"/>
+          </center>
+          <div class="level-set has-text-justified">
+            <p>
+            Illustration of GvU’s generated results across training steps. With ongoing self-supervised reinforcement learning, our method effectively leverages intrinsic rewards to progressively enhance the text-image alignment, demonstrating continual improvement in T2I tasks.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
 
+<section class="section is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3">Benchmark Curves of GvU</h2>
+          <center>
+          <img src="static/images/training_curves.jpg" alt="Benchmark Curves" class="center-image"/>
+          </center>
+          <div class="level-set has-text-justified">
+            <p>
+            Evolution across multiple benchmarks during the self-supervised RL process. As the RL training steps increase, our model demonstrates steadily improved visual generation performance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
